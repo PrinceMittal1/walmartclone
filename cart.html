@@ -5,8 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart Page</title>
+    <link rel="stylesheet" href="styles/cart.css">
 </head>
 <body>
-    <div></div>
+    <div id="navbar">
+
+    </div>
+    <div>
+        <h1 id="heading">Cart</h1>
+        <span></span>
+    </div>
+    <div id="cart_section">
+        <div id="left_cart">
+            <div id="left_cart_up">
+              <h1>Pickup or delivery from store, as soon as Today</h1>
+              <p><a href="" style="color:#2e2f32;">Reserve a Time</a></p>
+            </div>
+            <div id="total_items">
+             <h2>n Items</h2>
+             <button><i class="arrow"></i></button>
+            </div>
+            <div id="cart_items">
+
+            </div>
+        </div>
+        <div id="right_cart">
+            <div style="background-color: rgb(128, 128, 122);">
+                <button>Continue as checkout</button>
+            </div>
+            <div style="display:flex ;justify-content: space-between;">
+                <h3>Subtotal <span></span></h3>
+                <h3>Rs</h3>
+            </div>
+            <div style="display:flex ;justify-content: space-between;">
+                <h4>Taxes</h4>
+                <h5>Calculated at checkout</h5>
+            </div>
+            <div style="display:flex ;justify-content: space-between;">
+                <h3>Estimated total:</h3>
+                <h3><span>Rs</span></h3>
+            </div>
+          <hr>
+            <div id="coupon">
+            <p>Apply below coupon to get discount:</p>
+            </div>
+             
+        </div>
+    </div>
 </body>
 </html>
+<script src="scripts/cart.js"></script>
+
