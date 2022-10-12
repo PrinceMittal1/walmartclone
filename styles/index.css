@@ -166,11 +166,11 @@
 #second_div_third_second > div > img{
     width: 65%;
 }
-#third_div{
+#simple_div{
     background-color: white;
     margin-bottom: 10px;
 }
-#third_div_first{
+#simple_div_first{
     height: 50px;
     width: 96%;
     margin: auto;
@@ -239,13 +239,15 @@
     color: #46474a;
     line-height: 21px;
 }
-.btn_of_for_you, .btn_of_In_season{
+#btn_of_for_you, .btn_of_In_season{
     border-radius: 20px;
     margin-bottom: 25px;
     padding: 5px;
     width: 100px;
+    color: blue;
+    background-color: brown;
 }
-.btn_of_for_you:hover, .btn_of_In_season:hover{
+#btn_of_for_you:hover, .btn_of_In_season:hover{
     color: red;
     /* color: black; */
 }
@@ -539,3 +541,75 @@
     font-weight: 400;
     color: #2e2f32;
 }
+.img-box > img{
+    width: 90%;
+    margin-left: 5%;
+}
+#eight_div{
+    background-color: white;
+}
+#eight_div *{
+    background-color: white;
+}
+.swiper-slide{
+}
+.add_btn_of_eight_div{
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 20px;
+    width: 85px;
+    position: absolute;
+    left: 10px;
+    top: 170px;
+}
+.price_upper_box_of_eight_div{
+    margin-top: 50px;
+    display: flex;
+    margin-left: 10px;
+}
+.price_box_of_eight_div{
+    margin-right: 10px;
+}
+.title_box_of_eight_div{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.title_box_of_eight_div > h3{
+    width: 80%;
+    font-weight: 100;
+    font-size: 15px;
+}
+.pickup_deil_box_of_eight_div{
+    display: flex;
+    margin: 10px;
+    
+}
+.pickup_deil_box_of_eight_div > div{
+    margin-right: 10px;
+}
+#eight_div_first{
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container{
+    width: 96%;
+    margin-left: 2%;
+}
+#eight_div_first_first > h3, .price_box_of_eight_div > h3{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+}
+.heart_icon{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 24px;
+}
+/* .heart_icon{
+    color: red;
+    background-color: red;
+} */

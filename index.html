@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walmart</title>
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 </head>
 <body>
     <div id="outermost_box">
@@ -102,8 +103,24 @@
                 </div>
             </div>
         </div>
+        <div id="simple_div">
+            <div id="simple_div_first"><h3 id="simple_div_first_h3"></h3></div>
+        </div>
         <div id="third_div">
-            <div id="third_div_first"><h3 id="third_div_first_h3"></h3></div>
+            <div class="container">
+                <div class="swiper card_slider">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/rig7rtml7ufviqouj3o0.png">
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
         </div>
         <hr id="hr_to_use">
         <div id="fourth_div">
@@ -140,7 +157,7 @@
                         <p id="fifth_div_second_first_second_p"></p>
                     </div>
                     <div id="fifth_div_second_first_third">
-                        <button class="btn_of_for_you">Shop Now</button>
+                        <button id="btn_of_for_you">Shop Now</button>
                     </div>
                 </div>
                 <div id="fifth_div_second_second">
@@ -152,7 +169,7 @@
                         <p id="fifth_div_second_second_second_p"></p>
                     </div>
                     <div id="fifth_div_second_second_third">
-                        <button class="btn_of_for_you">Shop Now</button>
+                        <button id="btn_of_for_you">Shop Now</button>
                     </div>
                 </div>
                 <div id="fifth_div_second_third">
@@ -164,7 +181,7 @@
                         <p id="fifth_div_second_third_second_p"></p>
                     </div>
                     <div id="fifth_div_second_third_third">
-                        <button class="btn_of_for_you">Shop Now</button>
+                        <button id="btn_of_for_you">Shop Now</button>
                     </div>
                 </div>
             </div>
@@ -191,7 +208,25 @@
                 </div>
             </div>
         </div>
-        <div id="eight_div"></div>
+        <div id="eight_div">
+            <div id="eight_div_first">
+                <div id="eight_div_first_first"><h3>Build Your Cart</h3></div>
+            </div>
+            <div class="container">
+                <div class="swiper card_slider">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/rig7rtml7ufviqouj3o0.png">
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
         <!-- <hr id="hr_to_use"> -->
         <div id="nineth_div">
             <div id="nineth_div_first"><h3 id="nineth_div_first_h3">In season</h3></div>
@@ -314,15 +349,15 @@
                         <button class="btn_of_In_season">Shop Now</button>
                     </div>
                 </div>
-                <div id="eleventh_div_sixth_third">
-                    <div id="eleventh_div_sixth_third_first">
-                        <img id="eleventh_div_sixth_third_first_img">
+                <div id="eleventh_div_second_sixth">
+                    <div id="eleventh_div_second_sixth_first">
+                        <img id="eleventh_div_second_sixth_first_img">
                     </div>
-                    <div id="eleventh_div_sixth_third_second" class="eleventh_class_div_second_first_second">
-                        <h3 id="eleventh_div_sixth_third_second_h3"></h3>
-                        <p id="eleventh_div_sixth_third_second_p" class="elevnth_class_div_second_first_second_p"></p>
+                    <div id="eleventh_div_second_sixth_second" class="eleventh_class_div_second_first_second">
+                        <h3 id="eleventh_div_second_sixth_second_h3"></h3>
+                        <p id="eleventh_div_second_sixth_second_p" class="elevnth_class_div_second_first_second_p"></p>
                     </div>
-                    <div id="eleventh_div_sixth_third_third" class="eleventh_class_div_second_first_third">
+                    <div id="eleventh_div_second_sixth_third" class="eleventh_class_div_second_first_third">
                         <button class="btn_of_In_season">Shop Now</button>
                     </div>
                 </div>
@@ -352,3 +387,30 @@
 </html>
 <script src="./scripts/index.js" type="module"></script>
 <script src="https://kit.fontawesome.com/b55d099299.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script type="text/javascript">
+    var swiper = new Swiper(".card_slider", {
+        // slidesPerView: 7,
+        spaceBetween: 3,
+        loop : true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 2,
+          },
+          420:{
+            slidesPerView: 4,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 6,
+          },
+        },
+      });
+</script>
