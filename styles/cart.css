@@ -9,35 +9,81 @@ span{
     color: #2e2f32;
 }
 #cart_section{
-    width: 90%;
+    width: 95%;
     height: 600px;
     margin: auto;
    display: flex;
    justify-content: space-between;
-   gap: 20px;
+   gap: 25px;
 }
 #left_cart{
     width: 70%;
-    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 10px;
+    /* padding: 0px 20px; */
 }
 #right_cart{
     width: 30%;
-    border: 1px solid black;
+    /* height: 400px; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 10px;
+    padding: 20px;
 }
-#left_cart_up{
+
+
+#checkout{
+    padding: 15px 70px;
+    background-color: rgb(0,113,220);
+    color: white;
+    margin: auto;
+    display: block;
+    margin-top: 40px;
+    border: none;
+    border-radius: 25px;
+}
+#subtotal{
+    margin-top: 20px;
+}
+#btn_checkout{
+    height: 80px;
+
+}
+
+
+/* -------Empty cart style------- */
+
+
+#empty_cart{
+    width: 90%;
+    margin: auto;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+}
+#empty_bag_img > img{
+    width: 350px;
+    margin: auto;
+    display: block;
+}
+#shopping{
+    text-align: center;
+}
+#group_btn > button{
+    padding: 10px;
+    border: 1px solid rgb(19, 19, 29);
+    border-radius: 20px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+/* #home{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("https://wallpaper.dog/large/20433820.jpg");
+   background-size:cover;
+   
+   } */
+.item_data{
     display: flex;
     justify-content: space-between;
-    background-color: #f2f8fd;
+    border-bottom:1px solid #d5d7db;
+    margin: 10px;
 }
-#total_items{
-    display: flex;
-    justify-content: space-between;
-}
-#item{
-    display: flex;
-    justify-content: space-between;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-}
-#item > img{
-    width: 100px;
+.item_data img{
+    width: 140px;
 }
