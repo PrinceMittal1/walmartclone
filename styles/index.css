@@ -131,12 +131,18 @@
 #second_div_first_second_first_second > a{
     text-decoration: underline;
 }
-#second_div_second_first_h3, #second_div_third_first_h3, #fourth_div_first_h3, #fifth_div_first_h3{
+#second_div_second_first_h3, #second_div_third_first_h3, #third_div_first > h3, #fourth_div_first_h3, #fifth_div_first_h3{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin-right: 10px;
     font-size: 22px;
     font-weight: 700;
     color: #2e2f32;
+}
+#third_div_first{
+    width: 96%;
+    /* margin-left: 2%; */
+    margin: 25px;
+    margin-left: 2%;
 }
 #second_div_second{
     padding: 15px;
@@ -166,15 +172,56 @@
 #second_div_third_second > div > img{
     width: 65%;
 }
-#simple_div{
+.simple_div{
+    margin-top: 10px;
     background-color: white;
     margin-bottom: 10px;
 }
-#simple_div_first{
+.simple_div *{
+    background-color: white;
+}
+#simple_div_first_first{
+    border-radius: 10px;
+    border: 1px solid gray;
+    /* text-align: center; */
+    align-items: center;
+    display: flex;
     height: 50px;
     width: 96%;
     margin: auto;
     background-color: rgb(0, 113,220);
+}
+#simple_div_first_first *{
+    background-color: rgb(0, 113,220);
+}
+#simple_div_first_first{
+    /* width: 70%; */
+    display: flex;
+}
+#simple_div_first_first_first{
+    margin-left: 220px;
+    margin-right: 20px;
+}
+#simple_div_first_first_second{
+    margin-right: 20px;
+}
+#simple_div_first_first_second > h2{
+    font-size: 18px;
+    color: white;
+}
+#simple_div_first_first_first > img{
+    width: 35px;
+}
+#simple_div_first_first_third > p{
+    color: white;
+    text-decoration: underline;
+}
+#images_of_fashion{
+    /* border: 1px solid black; */
+    height: 200px;
+}
+#third_div > .container{
+    margin-bottom: 30px;
 }
 #hr_to_use{
     width: 96%;
@@ -239,16 +286,17 @@
     color: #46474a;
     line-height: 21px;
 }
-#btn_of_for_you, .btn_of_In_season{
+#btn_of_for_you, #btn_of_In_season{
     border-radius: 20px;
     margin-bottom: 25px;
-    padding: 5px;
+    padding: 10px;
     width: 100px;
-    color: blue;
-    background-color: brown;
+    color: black;
+    border: 1px solid black;
 }
-#btn_of_for_you:hover, .btn_of_In_season:hover{
-    color: red;
+#btn_of_for_you:hover, #btn_of_In_season:hover{
+    color: white;
+    background-color: #000000;
     /* color: black; */
 }
 #sixth_div{
@@ -329,10 +377,10 @@
     margin-bottom: 15px;
     margin-top: 25px;
 }
-#nineth_div{
+.nineth_div{
     background-color: white;
 }
-#nineth_div *{
+.nineth_div *{
     background-color: white;
 }
 #nineth_div_second{
@@ -380,10 +428,10 @@
 #nineth_div_second > div img{
     border-radius: 10px 10px 0px 0px;
 }
-#tenth_div{
+.tenth_div{
     background-color: white;
 }
-#tenth_div *{
+.tenth_div *{
     background-color: white;
 }
 #tenth_div_second{
@@ -433,10 +481,10 @@
 }
 
 
-#eleventh_div{
+.eleventh_div{
     background-color: white;
 }
-#eleventh_div *{
+.eleventh_div *{
     background-color: white;
 }
 #eleventh_div_second{
@@ -551,11 +599,17 @@
 #eight_div *{
     background-color: white;
 }
-.swiper-slide{
+.third_div{
+    background-color: white;
 }
-.add_btn_of_eight_div{
-    background-color: aqua;
-    padding: 10px;
+.third_div *{
+    background-color: white;
+}
+#add_btn_of_eight_div{
+    background-color: rgb(0, 113, 220);
+    border: 0;
+    color: white;
+    padding: 13px;
     border-radius: 20px;
     width: 85px;
     position: absolute;
@@ -563,7 +617,7 @@
     top: 170px;
 }
 .price_upper_box_of_eight_div{
-    margin-top: 50px;
+    margin-top: 35px;
     display: flex;
     margin-left: 10px;
 }
@@ -579,12 +633,13 @@
     font-weight: 100;
     font-size: 15px;
 }
-.pickup_deil_box_of_eight_div{
+#pickup_deil_box_of_eight_div{
     display: flex;
     margin: 10px;
-    
 }
-.pickup_deil_box_of_eight_div > div{
+#pickup_box_of_eight_div{
+    background-color: black;
+    color: rgb(red, green, blue);
     margin-right: 10px;
 }
 #eight_div_first{
@@ -609,7 +664,27 @@
     right: 10px;
     font-size: 24px;
 }
-/* .heart_icon{
-    color: red;
-    background-color: red;
-} */
+#img_1_of_option, #img_2_of_option{
+    width: 30px;
+    height: 30px;
+}
+#orginal_price_of_fashion_roll_div > p{
+    text-decoration: line-through;
+}
+#option_to_change{
+    margin-top: 20px;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    margin-left: 30%;
+}
+#option_to_change > div{
+    border: 1px solid gray;
+    border-radius: 30px;
+}
+.middle_for_extra{
+    background-color: white;
+}
+.middle_for_extra *{
+    background-color: white;
+}
