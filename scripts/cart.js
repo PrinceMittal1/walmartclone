@@ -65,7 +65,7 @@ arr.map((el,index)=>{
         quantity.value = el.quantity;
         price.innerText = `Rs: ${el.quantity*el.price}`;
         localStorage.setItem("cart",JSON.stringify(items));
-        CalculateTotalCartAmount();
+        calculateTotalCartAmount();
     });
     let quantity = document.createElement("input");
     quantity.value =el.quantity;
