@@ -77,7 +77,7 @@ function checkData(data) {
         document.getElementById('show-successful').style.display = 'block';
 
         setTimeout(() => {
-            //goto index href
+            location.href = "../index.html"
         }, 2000);
 
 
