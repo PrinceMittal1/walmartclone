@@ -50,6 +50,7 @@ arr.map((el,index)=>{
     image.alt = el.title;
     imgDiv.append(image);
     let productDiv = document.createElement("div");
+    productDiv.id = "productDiv";
     let name = document.createElement("h4");
     name.innerText = el.title;
     let price = document.createElement("p");
@@ -60,6 +61,7 @@ arr.map((el,index)=>{
     divContainer.className = "divContainer";
     let decre = document.createElement("button");
     decre.innerText = "-";
+    decre.style.border = "1px solid #d5d7db"
     decre.addEventListener("click",()=>{
         el.quantity = decrementValue(index,el.quantity);
         quantity.value = el.quantity;
@@ -70,9 +72,11 @@ arr.map((el,index)=>{
     let quantity = document.createElement("input");
     quantity.value =el.quantity;
      quantity.style.width = "10%";
+     quantity.style.border = "1px solid #d5d7db"
 
      let incre = document.createElement("button");
     incre.innerText = "+"
+    incre.style.border = "1px solid #d5d7db";
     incre.addEventListener("click",()=>{
         el.quantity =  incrementValue(index,el.quantity);
         quantity.value = el.quantity
@@ -80,11 +84,13 @@ arr.map((el,index)=>{
         localStorage.setItem("cart",JSON.stringify(items));
         calculateTotalCartAmount();
     });
-
+      divContainer.style.margin = "10%"
     divContainer.append(decre,quantity,incre);
 
      let remove = document.createElement("button");
-    remove.innerText = "Delete from Cart";
+     remove.id = "remove_btn";
+     remove.innerText = "Delete from Cart";
+    
     remove.addEventListener("click",function(){
         dltFromCart(index);
     });

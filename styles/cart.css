@@ -87,3 +87,14 @@ span{
 .item_data img{
     width: 140px;
 }
+#productDiv{
+    display: grid;
+    text-align: center;
+    margin: auto;
+}
+#remove_btn{
+    border-radius: 14px;
+    background-color: rgb(0,113,220);
+    color: white;
+    border: none;
+}
