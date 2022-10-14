@@ -11,6 +11,32 @@ async function getdata() {
   Products = res2
   console.log(Products);
   showProducts(Products)
+  document.getElementById("sortproducts").addEventListener("click", handlePriceSort)
+  function handlePriceSort(){
+    var selected= document.getElementById("sortproducts").value;
+       if(selected==="htl"){
+      Products.sort(function(a,b){
+        return b.price- a.price;
+       
+      });
+      showProducts(Products);
+     } 
+     if(selected==="lth"){
+      Products.sort(function(a,b){
+        return a.price-b.price;
+        
+      });
+      showProducts(Products);
+    }
+     if(selected=="relevance"){
+      showProducts(Products);
+     
+  }
+   
+  
+
+
+}
 }
 getdata();
 
@@ -20,6 +46,23 @@ document.getElementById("g-coffee").addEventListener("click", () => {
   });
 
   showProducts(data);
+  document.getElementById("sortproducts").addEventListener("click", handlePriceSort)
+  function handlePriceSort(){
+    var selected= document.getElementById("sortproducts").value;
+       if(selected==="htl"){
+      data.sort(function(a,b){
+        return b.price- a.price;
+      });
+     }
+  if(selected==="lth"){
+    data.sort(function(a,b){
+      return a.price-b.price;
+    });
+  }
+
+
+showProducts(data);
+}
 });
 
 document.getElementById("g-freshfood").addEventListener("click", () => {
@@ -28,6 +71,23 @@ document.getElementById("g-freshfood").addEventListener("click", () => {
   });
 
   showProducts(data);
+  document.getElementById("sortproducts").addEventListener("click", handlePriceSort)
+  function handlePriceSort(){
+    var selected= document.getElementById("sortproducts").value;
+       if(selected==="htl"){
+      data.sort(function(a,b){
+        return b.price- a.price;
+      });
+     }
+  if(selected==="lth"){
+    data.sort(function(a,b){
+      return a.price-b.price;
+    });
+  }
+
+
+showProducts(data);
+}
 });
 
 document.getElementById("g-meat").addEventListener("click", () => {
@@ -36,15 +96,51 @@ document.getElementById("g-meat").addEventListener("click", () => {
   });
 
   showProducts(data);
+  document.getElementById("sortproducts").addEventListener("click", handlePriceSort)
+  function handlePriceSort(){
+    var selected= document.getElementById("sortproducts").value;
+       if(selected==="htl"){
+      data.sort(function(a,b){
+        return b.price- a.price;
+      });
+     }
+  if(selected==="lth"){
+    data.sort(function(a,b){
+      return a.price-b.price;
+    });
+  }
+
+
+showProducts(data);
+}
 });
 
 document.getElementById("g-snaks").addEventListener("click", () => {
   let data = Products.filter((elem) => {
     return elem.category == "Snacks";
+
   });
 
   showProducts(data);
-});
+  document.getElementById("sortproducts").addEventListener("click", handlePriceSort)
+  function handlePriceSort(){
+    var selected= document.getElementById("sortproducts").value;
+       if(selected==="htl"){
+      data.sort(function(a,b){
+        return b.price- a.price;
+      });
+     }
+  if(selected==="lth"){
+    data.sort(function(a,b){
+      return a.price-b.price;
+    });
+  }
+
+
+showProducts(data);
+}
+  })
+
 
 document.getElementById("candy").addEventListener("click", () => {
   let data = Products.filter((elem) => {
@@ -52,7 +148,30 @@ document.getElementById("candy").addEventListener("click", () => {
   });
 
   showProducts(data);
-});
+  console.log(data);
+
+  document.getElementById("sortproducts").addEventListener("click", handlePriceSort)
+  function handlePriceSort(){
+    var selected= document.getElementById("sortproducts").value;
+       if(selected==="htl"){
+      data.sort(function(a,b){
+        return b.price- a.price;
+      });
+     }
+  if(selected==="lth"){
+    data.sort(function(a,b){
+      return a.price-b.price;
+    });
+  }
+
+
+showProducts(data);
+}
+
+
+  });
+ 
+
 let main = document.getElementById("lower");
 function showProducts(data) {
   main.innerHTML = "";
@@ -95,26 +214,53 @@ function showProducts(data) {
 
 function addToCart(index) {
 
-  var cartArray = JSON.parse(localStorage.getItem("Cart")) || [];
+  var cartArray = JSON.parse(localStorage.getItem("cart")) || [];
 
   cartArray.push(Products[index]);
 
 
-  localStorage.setItem("Cart", JSON.stringify(cartArray))
+  localStorage.setItem("cart", JSON.stringify(cartArray))
 }
 
 
 
 function addToWishList(i){
-var WishArray = JSON.parse(localStorage.getItem("WishList")) || [];
+var WishArray = JSON.parse(localStorage.getItem("wishlist")) || [];
 
   WishArray.push(Products[i]);
  
   
 
 
-  localStorage.setItem("WishList", JSON.stringify(WishArray))
+  localStorage.setItem("wishlist", JSON.stringify(WishArray))
 }
+
+function debounce(fn,delay){
+  let timerId;
+  return function(){
+      if (timerId){
+          clearTimeout(timerId)
+      }
+         timerId= setTimeout(function(){
+              fn();
+          },delay);
+      
+      
+  }
+}
+
+async function searchdata(){
+  let search = document.getElementById("searchinput")
+ const searchItem = search.value;
+ let url= `https://walmart-products-gopal.herokuapp.com/${searchItem}`
+        let res= await fetch(url);
+        let res2= await res.json();
+        showProducts(res2);
+        console.log(res2);
+
+ }
+
+ let debouncefunction = debounce(searchdata,3000)
 
 
 

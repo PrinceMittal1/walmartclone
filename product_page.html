@@ -11,106 +11,251 @@
 </head>
 
 <body>
-<!-- productpage html starts -->
-            <h2>Fresh Foods</h2>
-            <div id="wal-main-container">
-                <div id="upper">
+    <!-- productpage html starts -->
 
-                    <div class="cat"><img
-                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-2760/k2-_f0dfa75a-3c00-4fa0-b945-277ab657a4cc.v1.png?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
-                            alt="">
-
-                        <p>Meats & Seafoods</p>
-                    </div>
-                    <div class="cat"><img
-                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-4472/k2-_4913c9c4-652f-42bc-8235-b113f3d669a8.v1.png?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
-                            alt="">
-
-                        <p>Produce</p>
-                    </div>
-                    <div class="cat"><img
-                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-c01c/k2-_881f87ad-fd5b-418c-b4fb-e82911b77bcb.v1.png?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
-                            alt="">
-
-                        <p>Bread & Bakery</p>
-                    </div>
-                    <div class="cat"><img
-                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-ea37/k2-_a5424155-dc57-4149-9912-9cacdc227bf2.v1.png?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
-                            alt="">
-                        <p>Deli</p>
-                    </div>
-                    <div class="cat"><img
-                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-1016/k2-_cf0b0213-9e3e-4b9f-bf97-6e3827d5082f.v1.png?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
-                            alt="">
-
-                        <p>Dairy & Eggs</p>
-                    </div>
-                    <div class="cat"><img
-                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-6c88/k2-_03e643f4-53f5-43c2-b746-12963d9f9fc3.v1.png?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
-                            alt="">
-
-                        <p>Beef buying guide</p>
-                    </div>
-                </div>
-
-                <div  id="data">
-
-
-                    <div id="side-bar-filter"></div>
+    <input oninput="debouncefunction()" id="searchinput" type="text">
 
 
 
+    <h2>Fresh Foods</h2>
+    <div id="wal-main-container">
+        <div id="upper">
 
-                    <div id="products">
+            <div class="cat"><img
+                    src="https://i5.walmartimages.com/dfw/4ff9c6c9-2760/k2-_f0dfa75a-3c00-4fa0-b945-277ab657a4cc.v1.png?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                    alt="">
 
-                        
-                        <div id="wal-filters-div">
-                            <div class="wal-filters-child" id="g-coffee">Coffee</div>
-                            <div id="g-meat" class="wal-filters-child">Meat & Seafood</div>
-                            <div id="g-freshfood" class="wal-filters-child">Fresh Produce</div>
-                            <div id="g-snaks" class="wal-filters-child">Snacks</div>
-                            <div id="candy" class="wal-filters-child">Halloween food and candy</div>
-                           
-                        </div>
-                          
-                        <h2 id="g-finds">Frightful finds</h2>
-                        <div id="g-products-top">
-                            <div class="g-products-child">
-                                <div class="g-top-image"><img id="top-image" src="https://i5.walmartimages.com/dfw/4ff9c6c9-8f28/k2-_d7e63315-7e3a-4057-aab5-c47effd3f02e.v1.jpg?odnHeight=444&odnWidth=790&odnBg=FFFFFF" alt=""></div>
-                                <div> <h3 class="g-title">No tricks , Just treats</h3></div>
-                                <div class="g-top-div-p"><p>Stockup for a yummy goodie for a spookey</p></div>
-                                <span class="g-button-div">Shop Now</span>
-                                
-                                
-                            </div>
-                            <div class="g-products-child">
-                                <div class="g-top-image"><img id="top-image" src="https://i5.walmartimages.com/dfw/4ff9c6c9-30f6/k2-_ba9cf4fe-0c08-4c08-a568-55eaca9d0aa8.v1.jpg?odnHeight=444&odnWidth=790&odnBg=FFFFFF" alt=""></div>
-                                <div> <h3 class="g-title">Gone pumpkin, pickin</h3></div>
-                                <div class="g-top-div-p"><p>Find your perfect guard for a carving masterpiece</p></div>
-                                <span class="g-button-div">Shop Now</span>
-                                
-                            </div>
-                            <div class="g-products-child">
-                                <div class="g-top-image"><img id="top-image" src="https://i5.walmartimages.com/dfw/4ff9c6c9-1e00/k2-_80171302-765a-45ad-86cc-f3ea8a716fa3.v1.jpg?odnHeight=444&odnWidth=790&odnBg=FFFFFF" alt=""></div>
-                                <div> <h3 class="g-title">Don't get spooked</h3></div>
-                                <div class="g-top-div-p"><p>The hastest with the mostest has Halloween treats at the ready</p></div>
-                                <span class="g-button-div">Shop Now</span>
-                            </div>
-                        </div>
-
-                        <h2>Featured items</h2>
-
-
-                        <div  id="lower"></div>
-
-                    </div>
-
-
-                </div>
+                <p>Meats & Seafoods</p>
             </div>
-        </body>
+            <div class="cat"><img
+                    src="https://i5.walmartimages.com/dfw/4ff9c6c9-4472/k2-_4913c9c4-652f-42bc-8235-b113f3d669a8.v1.png?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                    alt="">
 
-    </html>
+                <p>Produce</p>
+            </div>
+            <div class="cat"><img
+                    src="https://i5.walmartimages.com/dfw/4ff9c6c9-c01c/k2-_881f87ad-fd5b-418c-b4fb-e82911b77bcb.v1.png?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                    alt="">
+
+                <p>Bread & Bakery</p>
+            </div>
+            <div class="cat"><img
+                    src="https://i5.walmartimages.com/dfw/4ff9c6c9-ea37/k2-_a5424155-dc57-4149-9912-9cacdc227bf2.v1.png?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                    alt="">
+                <p>Deli</p>
+            </div>
+            <div class="cat"><img
+                    src="https://i5.walmartimages.com/dfw/4ff9c6c9-1016/k2-_cf0b0213-9e3e-4b9f-bf97-6e3827d5082f.v1.png?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                    alt="">
+
+                <p>Dairy & Eggs</p>
+            </div>
+            <div class="cat"><img
+                    src="https://i5.walmartimages.com/dfw/4ff9c6c9-6c88/k2-_03e643f4-53f5-43c2-b746-12963d9f9fc3.v1.png?odnHeight=290&odnWidth=290&odnBg=FFFFFF"
+                    alt="">
+
+                <p>Beef buying guide</p>
+            </div>
+        </div>
+
+        <div id="data">
 
 
-    
+            <div id="side-bar-filter">
+                <div>
+                    <h2>Now Trending</h2>
+                </div>
+                <div class="g-sidebar-filter-child">
+                    <div class="product-image-div"> <img class="g-sidebar-image"
+                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-3f59/k2-_140eac33-7b29-4f28-ac95-bc1f5778a660.v1.jpg?odnHeight=96&odnWidth=96&odnBg=FFFFFF"
+                            alt=""> </div>
+                    <div>
+                        <h3>Halloween food and candy</h3>
+                    </div>
+                    
+                </div>
+                <div class="g-sidebar-filter-child">
+                    <div class="product-image-div"> <img class="g-sidebar-image"
+                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-e337/k2-_eabcb3ce-8e6c-4349-85a5-37a7d1bdf9b8.v1.jpg?odnHeight=96&odnWidth=96&odnBg=FFFFFF"
+                            alt=""> </div>
+                    <div>
+                        <h3 style="margin-right:80px">Game Time Food</h3>
+                    </div>
+                    
+                </div>
+                <div class="g-sidebar-filter-child">
+                    <div class="product-image-div"> <img class="g-sidebar-image"
+                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-388e/k2-_d25b2a47-9d3b-4b8f-a8b3-1f395b6452f9.v1.jpg?odnHeight=96&odnWidth=96&odnBg=FFFFFF"
+                            alt=""> </div>
+                    <div>
+                        <h3 style="margin-right:100px">Fall Flavers</h3>
+                    </div>
+                   
+                </div>
+                <div class="g-sidebar-filter-child">
+                    <div class="product-image-div"> <img class="g-sidebar-image"
+                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-fa83/k2-_f88f52ba-be03-4087-99f7-663231b7086e.v1.jpg?odnHeight=96&odnWidth=96&odnBg=FFFFFF"
+                            alt=""> </div>
+                    <div>
+                        <h3 style="margin-right:80px">Only at walmart</h3>
+                    </div>
+                    
+                </div>
+                <div class="g-sidebar-filter-child">
+                    <div class="product-image-div"> <img class="g-sidebar-image"
+                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-7c05/k2-_c997cb14-d88a-4b6f-90c7-6b18f4391891.v1.jpg?odnHeight=96&odnWidth=96&odnBg=FFFFFF"
+                            alt=""> </div>
+                    <div>
+                        <h3 style="margin-right:100px">Recipes</h3>
+                    </div>
+                   
+                </div>
+                <div class="g-sidebar-filter-child">
+                    <div class="product-image-div"> <img class="g-sidebar-image"
+                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-877b/k2-_17060cce-fa02-455e-a0be-eda182b82de2.v1.jpg?odnHeight=96&odnWidth=96&odnBg=FFFFFF"
+                            alt=""> </div>
+                    <div>
+                        <h3 style="margin-right:80px">Fresh Produce</h3>
+                    </div>
+                  
+                </div>
+                <div class="g-sidebar-filter-child">
+                    <div class="product-image-div"> <img class="g-sidebar-image"
+                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-8541/k2-_eeea28e9-76ac-4295-9cb6-11c9ffbbe9ab.v1.jpg?odnHeight=96&odnWidth=96&odnBg=FFFFFF"
+                            alt=""> </div>
+                    <div>
+                        <h3 style="margin-right:80px">Meat and Seafood</h3>
+                    </div>
+                 
+                </div>
+                  <div class="g-sidebar-filter-child">
+                    <div class="product-image-div"> <img class="g-sidebar-image"
+                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-3f59/k2-_140eac33-7b29-4f28-ac95-bc1f5778a660.v1.jpg?odnHeight=96&odnWidth=96&odnBg=FFFFFF"
+                            alt=""> </div>
+                    <div>
+                        <h3 style="margin-right:110px">Deli</h3>
+                    </div>
+                   
+                </div>
+                <div class="g-sidebar-filter-child">
+                    <div class="product-image-div"> <img class="g-sidebar-image"
+                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-18d8/k2-_22b8c335-1739-4b18-a156-c8d85ccf35ca.v1.jpg?odnHeight=96&odnWidth=96&odnBg=FFFFFF"
+                            alt=""> </div>
+                    <div>
+                        <h3 style="margin-right:90px">Snacks</h3>
+                    </div>
+                  
+                </div>
+                <div class="g-sidebar-filter-child">
+                    <div class="product-image-div"> <img class="g-sidebar-image"
+                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-cfcd/k2-_97a40820-7d09-42a8-b691-9ec9d2f19926.v1.jpg?odnHeight=96&odnWidth=96&odnBg=FFFFFF"
+                            alt=""> </div>
+                    <div >
+                        <h3 style="margin-right:90px">Pantry</h3>
+                    </div>
+                 
+                </div>
+                <div class="g-sidebar-filter-child">
+                    <div class="product-image-div"> <img class="g-sidebar-image"
+                            src="https://i5.walmartimages.com/dfw/4ff9c6c9-2a8e/k2-_9de384d1-e00a-45db-b90e-d420ce543078.v1.jpg?odnHeight=96&odnWidth=96&odnBg=FFFFFF"
+                            alt=""> </div>
+                    <div>
+                        <h3 style="margin-right:70px">Beverages</h3>
+                    </div>
+                  
+                </div>
+                
+                
+                
+
+            </div>
+
+
+
+
+            <div id="products">
+
+
+                <div id="wal-filters-div">
+                    <div class="wal-filters-child" id="g-coffee">Coffee</div>
+                    <div id="g-meat" class="wal-filters-child">Meat & Seafood</div>
+                    <div id="g-freshfood" class="wal-filters-child">Fresh Produce</div>
+                    <div id="g-snaks" class="wal-filters-child">Snacks</div>
+                    <div id="candy" class="wal-filters-child">Halloween food and candy</div>
+
+                </div>
+                      <div id="sorting">
+                            <select name="selecttag" id="sortproducts">
+                                <Option value="relevance"><h3>Sort By</h3></Option>
+        
+                                <Option value="lth">Price: Low to High</Option>
+                                <Option value="htl">High to Low</Option>
+        
+                            </select>
+                        </div>
+                      <!-- </div> -->
+              
+
+
+
+
+
+
+                <h2 id="g-finds">Frightful finds</h2>
+
+
+                <div id="g-products-top">
+                    <div class="g-products-child">
+                        <div class="g-top-image"><img id="top-image"
+                                src="https://i5.walmartimages.com/dfw/4ff9c6c9-8f28/k2-_d7e63315-7e3a-4057-aab5-c47effd3f02e.v1.jpg?odnHeight=444&odnWidth=790&odnBg=FFFFFF"
+                                alt=""></div>
+                        <div>
+                            <h3 class="g-title">No tricks , Just treats</h3>
+                        </div>
+                        <div class="g-top-div-p">
+                            <p>Stockup for a yummy goodie for a spookey</p>
+                        </div>
+                        <span class="g-button-div">Shop Now</span>
+
+
+                    </div>
+                    <div class="g-products-child">
+                        <div class="g-top-image"><img id="top-image"
+                                src="https://i5.walmartimages.com/dfw/4ff9c6c9-30f6/k2-_ba9cf4fe-0c08-4c08-a568-55eaca9d0aa8.v1.jpg?odnHeight=444&odnWidth=790&odnBg=FFFFFF"
+                                alt=""></div>
+                        <div>
+                            <h3 class="g-title">Gone pumpkin, pickin</h3>
+                        </div>
+                        <div class="g-top-div-p">
+                            <p>Find your perfect guard for a carving masterpiece</p>
+                        </div>
+                        <span class="g-button-div">Shop Now</span>
+
+                    </div>
+                    <div class="g-products-child">
+                        <div class="g-top-image"><img id="top-image"
+                                src="https://i5.walmartimages.com/dfw/4ff9c6c9-1e00/k2-_80171302-765a-45ad-86cc-f3ea8a716fa3.v1.jpg?odnHeight=444&odnWidth=790&odnBg=FFFFFF"
+                                alt=""></div>
+                        <div>
+                            <h3 class="g-title">Don't get spooked</h3>
+                        </div>
+                        <div class="g-top-div-p">
+                            <p>The hastest with the mostest has Halloween treats at the ready</p>
+                        </div>
+                        <span class="g-button-div">Shop Now</span>
+                    </div>
+                </div>
+
+                <h2>Featured items</h2>
+
+
+                <div id="lower"></div>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
