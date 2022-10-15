@@ -180,7 +180,7 @@ function showProducts(data) {
     const parentEl = document.createElement("div");
     parentEl.setAttribute("id", "g-products_tab");
     parentEl.innerHTML = `
-      <div id="g-img-main-div">
+      <div onclick="getproduct(${id})" id="g-img-main-div">
       <div id="g-image-div">
         <img id="g-img" src="${image}" alt="">
 
@@ -263,7 +263,22 @@ async function searchdata(){
  let debouncefunction = debounce(searchdata,3000)
 
 
+ function getproduct(id){
+    
+ 
+  let url= `https://walmart-products-gopal.herokuapp.com/groceries/${id}`
 
+fetch(url).then(function(res){
+return res.json();
+}).then(function(res2){
+console.log(res2);
+
+localStorage.setItem("product", JSON.stringify(res2));
+  window.location.href="./single_product.html"
+})
+
+
+}
 
 
 
