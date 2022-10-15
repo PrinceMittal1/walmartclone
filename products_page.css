@@ -39,7 +39,7 @@
 #upper {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   width: 100%;
   
 }
@@ -201,7 +201,7 @@
 
 #lower {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 
 }
@@ -211,6 +211,8 @@
   cursor: pointer;
   font-family: Bogle, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #46474a;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
 
 }
 
@@ -298,7 +300,7 @@ select[name=selecttag] {
 /* desktop screen   */
 @media only screen and (min-width: 900px) and (max-width: 1440px) {
   #lower {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   #upper {
