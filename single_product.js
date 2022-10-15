@@ -58,10 +58,14 @@ async  function addToBucket(id){
    let res= await fetch(url);
    let res2= await res.json();
    console.log(res2);
-
+   if(mybucket.find((el)=>el.id===res2.id)){
+    alert("Item is already added in cart");
+  }else{
+    mybucket.push(res2);
+  }
   
 
-   mybucket.push(res2)
+  //  mybucket.push(res2)
 
    localStorage.setItem("cart", JSON.stringify(mybucket))
 
@@ -76,10 +80,14 @@ async  function addToBucket(id){
    let res= await fetch(url);
    let res2= await res.json();
    console.log(res2);
-
+   if(mybucket.find((el)=>el.id===res2.id)){
+    alert("Item is already added in wishlist");
+  }else{
+    mybucket.push(res2);
+  }
   
 
-   mybucket.push(res2)
+  //  mybucket.push(res2)
 
    localStorage.setItem("wishlist", JSON.stringify(mybucket))
 
