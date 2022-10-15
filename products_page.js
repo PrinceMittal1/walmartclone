@@ -180,7 +180,7 @@ function showProducts(data) {
     const parentEl = document.createElement("div");
     parentEl.setAttribute("id", "g-products_tab");
     parentEl.innerHTML = `
-      <div onclick="getproduct(${id})" id="g-img-main-div">
+      <div  id="g-img-main-div">
       <div id="g-image-div">
         <img id="g-img" src="${image}" alt="">
 
@@ -203,20 +203,24 @@ function showProducts(data) {
     </div>
 
     <div id="g-title-div">
-        <p>${title}</p>
+        <p onclick="getproduct(${id})">${title}</p>
     </div>
             `;
     main.appendChild(parentEl);
   });
 }
-// 
 
 
 function addToCart(index) {
 
   var cartArray = JSON.parse(localStorage.getItem("cart")) || [];
+    if(cartArray.find((el)=>el.id===Products[index].id)){
+      alert("Item is already added in cart");
+    }else{
+      cartArray.push(Products[index]);
+    }
 
-  cartArray.push(Products[index]);
+  
 
 
   localStorage.setItem("cart", JSON.stringify(cartArray))
@@ -227,7 +231,13 @@ function addToCart(index) {
 function addToWishList(i){
 var WishArray = JSON.parse(localStorage.getItem("wishlist")) || [];
 
+
+if(WishArray.find((el)=>el.id===Products[i].id)){
+  alert("Item is already in list");
+}else{
   WishArray.push(Products[i]);
+}
+ 
  
   
 
@@ -264,8 +274,6 @@ async function searchdata(){
 
 
  function getproduct(id){
-    
- 
   let url= `https://walmart-products-gopal.herokuapp.com/groceries/${id}`
 
 fetch(url).then(function(res){
@@ -276,8 +284,6 @@ console.log(res2);
 localStorage.setItem("product", JSON.stringify(res2));
   window.location.href="./single_product.html"
 })
-
-
 }
 
 
