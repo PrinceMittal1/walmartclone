@@ -1,3 +1,6 @@
+import navbar from "../component/navbar.js";
+  document.getElementById("navbar").innerHTML = navbar();
+
 
 let items = JSON.parse(localStorage.getItem("cart")) || [];
 console.log(items);
@@ -12,8 +15,8 @@ for(let i =0;i<items.length;i++){
     totalAmount += items[i].quantity*items[i].price;
 }
 
-document.getElementById('total_amount').innerText = `Rs. ${totalAmount}`
-  document.getElementById('total').innerText = `Rs. ${totalAmount}`
+document.getElementById('total_amount').innerText = `$ ${totalAmount}`
+  document.getElementById('total').innerText = `$ ${totalAmount}`
 
 
 let displayCartData = (arr)=>{
@@ -32,7 +35,7 @@ arr.map((el,index)=>{
     let name = document.createElement("h4");
     name.innerText = el.title;
     let price = document.createElement("p");
-     price.innerText = `Rs: ${el.quantity*el.price}`;
+     price.innerText = `$ ${el.quantity*el.price}`;
     productDiv.append(name,price);
     let divBox = document.createElement("div");
     let divContainer = document.createElement("div");
@@ -43,13 +46,13 @@ arr.map((el,index)=>{
     decre.addEventListener("click",()=>{
         el.quantity = decrementValue(index,el.quantity);
         quantity.value = el.quantity;
-        price.innerText = `Rs: ${el.quantity*el.price}`;
+        price.innerText = `$ ${(el.quantity*el.price).toFixed(2)}`;
         localStorage.setItem("cart",JSON.stringify(items));
         calculateTotalCartAmount();
     });
     let quantity = document.createElement("input");
     quantity.value =el.quantity;
-     quantity.style.width = "10%";
+     quantity.style.width = "15%";
      quantity.style.border = "1px solid #d5d7db"
 
      let incre = document.createElement("button");
@@ -58,7 +61,7 @@ arr.map((el,index)=>{
     incre.addEventListener("click",()=>{
         el.quantity =  incrementValue(index,el.quantity);
         quantity.value = el.quantity
-        price.innerText = `Rs: ${el.quantity*el.price}`;
+        price.innerText = `$ ${(el.quantity*el.price).toFixed(2)}`;
         localStorage.setItem("cart",JSON.stringify(items));
         calculateTotalCartAmount();
     });
@@ -109,8 +112,8 @@ function decrementValue(index, itemQuantity){
     totalAmount+=element.quantity*+element.price
   });
 
-  document.getElementById('total_amount').innerText = `Rs. ${totalAmount}`
-  document.getElementById('total').innerText = `Rs. ${totalAmount}`
+  document.getElementById('total_amount').innerText = `Rs. ${(totalAmount).toFixed(2)}`
+  document.getElementById('total').innerText = `Rs. ${(totalAmount).toFixed(2)}`
   }
 
   document.getElementById('coupon_btn').addEventListener("click",function(){
@@ -127,11 +130,11 @@ function decrementValue(index, itemQuantity){
     if(couponCode=="masai30"&&couponApplied==false){
         totalAmount=totalAmount - ((totalAmount/100)*30);
     }else if(couponCode == "firstuser"&&couponApplied==false){
-        totalAmount=totalAmount-250;
+        totalAmount=totalAmount-50;
     }
     couponApplied=true;
-    document.getElementById('total_amount').innerText = `Rs. ${totalAmount}`
-  document.getElementById('total').innerText = `Rs. ${totalAmount}`
+    document.getElementById('total_amount').innerText = `Rs. ${(totalAmount).toFixed(2)}`
+  document.getElementById('total').innerText = `Rs. ${(totalAmount).toFixed(2)}`
   }
 
 
