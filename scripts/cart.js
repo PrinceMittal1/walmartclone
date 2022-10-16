@@ -112,8 +112,8 @@ function decrementValue(index, itemQuantity){
     totalAmount+=element.quantity*+element.price
   });
 
-  document.getElementById('total_amount').innerText = `Rs. ${(totalAmount).toFixed(2)}`
-  document.getElementById('total').innerText = `Rs. ${(totalAmount).toFixed(2)}`
+  document.getElementById('total_amount').innerText = `$ ${(totalAmount).toFixed(2)}`
+  document.getElementById('total').innerText = `$ ${(totalAmount).toFixed(2)}`
   }
 
   document.getElementById('coupon_btn').addEventListener("click",function(){
@@ -133,8 +133,8 @@ function decrementValue(index, itemQuantity){
         totalAmount=totalAmount-50;
     }
     couponApplied=true;
-    document.getElementById('total_amount').innerText = `Rs. ${(totalAmount).toFixed(2)}`
-  document.getElementById('total').innerText = `Rs. ${(totalAmount).toFixed(2)}`
+    document.getElementById('total_amount').innerText = `$ ${(totalAmount).toFixed(2)}`
+  document.getElementById('total').innerText = `$ ${(totalAmount).toFixed(2)}`
   }
 
 
